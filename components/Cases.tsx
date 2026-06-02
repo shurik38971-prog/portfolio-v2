@@ -1,94 +1,143 @@
-const cases = [
+import { CasePreview } from "@/components/CasePreview";
+
+const concepts = [
   {
-    title: "🦷 Стоматологическая клиника",
-    problem:
-      "Сайт не помогал посетителю принять решение о записи: ключевые услуги и преимущества клиники были недостаточно заметны.",
-    solution:
-      "Создал посадочную страницу с акцентом на популярных услугах, преимуществах клиники и простом сценарии записи.",
-    result:
-      "Получился современный инструмент презентации услуг, который помогает потенциальным пациентам быстрее перейти к записи на консультацию.",
+    niche: "Стоматология",
+    variant: "dental" as const,
+    task:
+      "Концепт лендинга клиники: спокойная подача, понятная иерархия услуг и короткий путь к записи без перегруза интерфейса.",
+    solutions: [
+      "Сетка популярных услуг с акцентом на визуальный ритм и читаемость",
+      "Блок доверия и преимуществ — компактно, без «маркетингового шума»",
+      "Сценарий записи: один главный CTA и вторичный контакт",
+      "Светлая медицинская палитра и крупная типографика в hero",
+    ],
+    stack: ["Next.js", "TypeScript", "Tailwind CSS"],
   },
   {
-    title: "🎓 Онлайн-школа английского языка",
-    problem:
-      "Страница содержала слишком много информации и не помогала посетителю быстро понять ценность предложения и следующий шаг.",
-    solution:
-      "Разработал лендинг с акцентом на одном предложении, понятной структурой, блоком преимуществ и короткой формой заявки.",
-    result:
-      "Путь пользователя стал проще и понятнее. Посетитель быстрее знакомится с предложением и может оставить заявку без лишних действий.",
+    niche: "Онлайн-школа",
+    variant: "school" as const,
+    task:
+      "Концепт страницы под одно предложение: быстро показать формат обучения и снизить когнитивную нагрузку до действия.",
+    solutions: [
+      "Hero с одним оффером и коротким пояснением ценности",
+      "Пошаговый блок «как проходит обучение» вместо длинного текста",
+      "Карточки преимуществ в равном визуальном весе",
+      "Компактная форма заявки без лишних полей",
+    ],
+    stack: ["Next.js", "TypeScript", "Tailwind CSS"],
   },
   {
-    title: "⚖️ Частный юрист",
-    problem:
-      "Сайт не объяснял специализацию юриста и не помогал посетителям быстро понять, по каким вопросам можно обратиться.",
-    solution:
-      "Перестроил структуру сайта: выделил основные направления работы, добавил описание процесса сотрудничества и удобные способы связи.",
-    result:
-      "Информация стала восприниматься проще, а посетители получили понятный сценарий обращения за консультацией.",
+    niche: "Частный юрист",
+    variant: "lawyer" as const,
+    task:
+      "Концепт сайта эксперта: ясно показать направления работы и сценарий обращения, сохранив сдержанный деловой тон.",
+    solutions: [
+      "Карточки специализаций вместо сплошного текста",
+      "Линейный блок этапов сотрудничества",
+      "Модуль контактов с несколькими каналами связи",
+      "Строгая типографика и контрастная структура разделов",
+    ],
+    stack: ["Next.js", "TypeScript", "Tailwind CSS"],
   },
   {
-    title: "🔧 Сервис по ремонту техники",
-    problem:
-      "Сайт был неудобен для мобильных пользователей: важная информация и контакты находились слишком глубоко в структуре страниц.",
-    solution:
-      "Создал адаптивный сайт с быстрым доступом к контактам, услугам и форме расчёта стоимости.",
-    result:
-      "Пользователи могут быстрее найти нужную информацию и связаться с компанией с любого устройства.",
+    niche: "Сервис ремонта",
+    variant: "repair" as const,
+    task:
+      "Концепт мобильно-ориентированного сайта услуг: быстрый доступ к контактам, прайсу и форме расчёта стоимости.",
+    solutions: [
+      "Приоритет контактов и CTA на первом экране",
+      "Список услуг с понятными карточками и иконками",
+      "Блок калькулятора / заявки на оценку ремонта",
+      "Адаптивная сетка с упором на thumb-zone на телефоне",
+    ],
+    stack: ["Next.js", "TypeScript", "Tailwind CSS"],
   },
 ];
 
 export function Cases() {
   return (
-    <section id="cases" className="section-padding">
+    <section id="concepts" className="section-padding">
       <div className="container-narrow">
-        <div className="max-w-2xl">
+        <div className="max-w-3xl">
           <p className="text-sm font-semibold uppercase tracking-wider text-zinc-400">
-            Кейсы
+            Портфолио
           </p>
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
-            Было → сделал → стало
+            Концепты для разных ниш
           </h2>
-          <p className="mt-4 text-lg text-zinc-400">
-            Реальные сценарии: от проблемы бизнеса до сайта, который ведёт к
-            заявке.
+          <p className="mt-4 text-lg leading-relaxed text-zinc-400">
+            Демонстрационные проекты, показывающие мой подход к структуре, UX и
+            упаковке бизнеса.
           </p>
         </div>
 
-        <div className="mt-14 space-y-8">
-          {cases.map((item) => (
+        <div className="mt-14 space-y-16 sm:space-y-20">
+          {concepts.map((item, index) => (
             <article
-              key={item.title}
-              className="rounded-2xl border border-subtle bg-surface-card p-6 sm:p-10"
+              key={item.niche}
+              className="grid gap-8 lg:grid-cols-2 lg:items-start lg:gap-12"
             >
-              <h3 className="text-lg font-semibold text-white sm:text-xl">
-                {item.title}
-              </h3>
+              <div className={index % 2 === 1 ? "lg:order-2" : ""}>
+                <p className="text-sm font-semibold uppercase tracking-wider text-zinc-500">
+                  Ниша
+                </p>
+                <h3 className="mt-2 text-2xl font-bold text-white sm:text-3xl">
+                  {item.niche}
+                </h3>
 
-              <div className="mt-8 grid gap-6 lg:grid-cols-3">
-                <div>
-                  <p className="text-xs font-semibold uppercase tracking-wider text-zinc-400">
-                    Проблема
-                  </p>
-                  <p className="mt-2 leading-relaxed text-zinc-300">
-                    {item.problem}
-                  </p>
+                <div className="mt-8 lg:hidden">
+                  <CasePreview variant={item.variant} />
                 </div>
-                <div>
-                  <p className="text-xs font-semibold uppercase tracking-wider text-zinc-300">
-                    Решение
-                  </p>
-                  <p className="mt-2 leading-relaxed text-zinc-300">
-                    {item.solution}
-                  </p>
-                </div>
-                <div className="rounded-xl border border-zinc-800 bg-surface-raised p-5">
+
+                <div className="mt-8">
                   <p className="text-xs font-semibold uppercase tracking-wider text-zinc-500">
-                    Результат
+                    Задача
                   </p>
-                  <p className="mt-2 font-medium leading-relaxed text-white">
-                    {item.result}
-                  </p>
+                  <p className="mt-2 leading-relaxed text-zinc-300">{item.task}</p>
                 </div>
+
+                <div className="mt-6">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-zinc-500">
+                    Ключевые решения
+                  </p>
+                  <ul className="mt-3 space-y-2.5">
+                    {item.solutions.map((solution) => (
+                      <li
+                        key={solution}
+                        className="flex gap-2.5 text-sm leading-relaxed text-zinc-400"
+                      >
+                        <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-zinc-500" />
+                        {solution}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="mt-6">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-zinc-500">
+                    Стек
+                  </p>
+                  <ul className="mt-3 flex flex-wrap gap-2">
+                    {item.stack.map((tech) => (
+                      <li
+                        key={tech}
+                        className="rounded-full border border-zinc-700 bg-zinc-900/80 px-3 py-1 text-xs font-medium text-zinc-300"
+                      >
+                        {tech}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              <div
+                className={`hidden lg:block ${index % 2 === 1 ? "lg:order-1" : ""}`}
+              >
+                <p className="mb-3 text-xs font-medium uppercase tracking-wider text-zinc-600">
+                  Скриншот концепта
+                </p>
+                <CasePreview variant={item.variant} />
               </div>
             </article>
           ))}

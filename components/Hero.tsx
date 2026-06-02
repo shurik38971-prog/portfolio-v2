@@ -29,8 +29,8 @@ export function Hero() {
           <Button href={TELEGRAM_URL} external>
             {CTA_PRIMARY}
           </Button>
-          <Button href="#cases" variant="secondary">
-            Смотреть кейсы
+          <Button href="#concepts" variant="secondary">
+            Смотреть концепты
           </Button>
         </div>
 
