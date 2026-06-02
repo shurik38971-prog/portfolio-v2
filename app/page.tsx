@@ -1,6 +1,5 @@
 import { Hero } from "@/components/Hero";
 import { ForWho } from "@/components/ForWho";
-import { Intro } from "@/components/Intro";
 import { Services } from "@/components/Services";
 import { Cases } from "@/components/Cases";
 import { WhyMe } from "@/components/WhyMe";
@@ -16,7 +15,6 @@ export default function Home() {
     <>
       <Hero />
       <ForWho />
-      <Intro />
       <Services />
       <Cases />
       <WhyMe />

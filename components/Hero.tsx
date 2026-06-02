@@ -36,9 +36,12 @@ export function Hero() {
 
         <ul className="mt-14 grid gap-6 border-t border-subtle pt-10 sm:grid-cols-3">
           {[
-            { value: "Заявки", label: "главная метрика каждого проекта" },
-            { value: "7–14 дней", label: "средний срок запуска лендинга" },
-            { value: "Под ключ", label: "от идеи до публикации и правок" },
+            {
+              value: "Без шаблонов",
+              label: "структура и дизайн под конкретную нишу",
+            },
+            { value: "3–7 дней", label: "средний срок запуска" },
+            { value: "Под ключ", label: "всё от прототипа до запуска" },
           ].map((item) => (
             <li key={item.value}>
               <p className="text-2xl font-bold text-white">{item.value}</p>

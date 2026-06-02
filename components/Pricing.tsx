@@ -5,18 +5,39 @@ const plans = [
   {
     title: "Лендинг",
     price: "от 20 000 ₽",
-    description: "Одна страница под заявки или рекламу: оффер, блоки доверия, форма связи.",
+    features: [
+      "анализ задачи",
+      "адаптивный дизайн",
+      "форма заявок",
+      "подключение домена",
+      "запуск проекта",
+    ],
+    featured: false,
   },
   {
     title: "Корпоративный сайт",
     price: "от 35 000 ₽",
-    description: "Несколько страниц: услуги, о компании, кейсы и удобный путь к контакту.",
+    features: [
+      "анализ задачи и структуры",
+      "несколько страниц",
+      "адаптивный дизайн",
+      "формы заявок",
+      "базовая SEO-структура",
+      "запуск проекта",
+    ],
     featured: true,
   },
   {
     title: "Индивидуальный проект",
     price: "обсуждается отдельно",
-    description: "Интеграции, автоматизация, личные кабинеты и нестандартная логика.",
+    features: [
+      "техническое задание",
+      "интеграции и автоматизация",
+      "нестандартная логика",
+      "тестирование",
+      "сопровождение после запуска",
+    ],
+    featured: false,
   },
 ];
 
@@ -51,9 +72,19 @@ export function Pricing() {
               <p className="mt-4 text-3xl font-bold tracking-tight text-white">
                 {plan.price}
               </p>
-              <p className="mt-4 flex-1 leading-relaxed text-zinc-400">
-                {plan.description}
-              </p>
+              <ul className="mt-6 flex-1 space-y-2.5">
+                {plan.features.map((feature) => (
+                  <li
+                    key={feature}
+                    className="flex items-start gap-2 text-sm text-zinc-400"
+                  >
+                    <span className="text-white" aria-hidden>
+                      ✓
+                    </span>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
             </article>
           ))}
         </div>
