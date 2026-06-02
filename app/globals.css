@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-surface text-zinc-50 antialiased;
+  }
+}
+
+@layer utilities {
+  .section-padding {
+    @apply px-5 py-20 sm:px-8 lg:px-12 lg:py-28;
+  }
+
+  .container-narrow {
+    @apply mx-auto max-w-6xl;
+  }
+
+  .section-alt {
+    @apply bg-surface-raised;
+  }
+
+  .text-muted {
+    @apply text-zinc-400;
+  }
+
+  .border-subtle {
+    @apply border-zinc-800;
+  }
+}
