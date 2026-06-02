@@ -3,6 +3,7 @@ import { ForWho } from "@/components/ForWho";
 import { Intro } from "@/components/Intro";
 import { Services } from "@/components/Services";
 import { Cases } from "@/components/Cases";
+import { WhyMe } from "@/components/WhyMe";
 import { About } from "@/components/About";
 import { Process } from "@/components/Process";
 import { Pricing } from "@/components/Pricing";
@@ -18,6 +19,7 @@ export default function Home() {
       <Intro />
       <Services />
       <Cases />
+      <WhyMe />
       <About />
       <Process />
       <Pricing />
