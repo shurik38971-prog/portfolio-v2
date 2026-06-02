@@ -31,10 +31,10 @@ export function Process() {
       <div className="container-narrow">
         <div className="max-w-2xl">
           <p className="text-sm font-semibold uppercase tracking-wider text-zinc-400">
-            Процесс
+            Как проходит работа
           </p>
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
-            Простая схема работы
+            От анализа до запуска — в четыре шага
           </h2>
           <p className="mt-4 text-lg text-zinc-400">
             Вы всегда понимаете, на каком этапе проект и что будет дальше.

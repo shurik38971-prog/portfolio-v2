@@ -1,6 +1,5 @@
 import { Button } from "@/components/Button";
-import { BRAND_NAME } from "@/lib/brand";
-import { TELEGRAM_URL } from "@/lib/constants";
+import { CTA_PRIMARY, TELEGRAM_URL } from "@/lib/constants";
 
 const trustPoints = [
   {
@@ -24,20 +23,19 @@ export function About() {
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div>
             <p className="text-sm font-semibold uppercase tracking-wider text-zinc-400">
-              Почему {BRAND_NAME}
+              Почему мне доверяют
             </p>
             <blockquote className="mt-4 text-3xl font-bold leading-snug tracking-tight text-white sm:text-4xl">
-              Мы делаем сайты не ради дизайна, а ради результата — заявок и
+              Я делаю сайты не ради дизайна, а ради результата — заявок и
               клиентов.
             </blockquote>
             <p className="mt-6 text-lg leading-relaxed text-zinc-400">
-              Студия {BRAND_NAME} работает с малым бизнесом, экспертами и
-              услугами. Наша задача — чтобы сайт окупался диалогами с клиентами,
-              а не висел в закладках.
+              Работаю с малым бизнесом, экспертами и услугами. Моя задача —
+              чтобы сайт окупался диалогами с клиентами, а не висел в закладках.
             </p>
             <div className="mt-8">
               <Button href={TELEGRAM_URL} external>
-                Написать и обсудить проект
+                {CTA_PRIMARY}
               </Button>
             </div>
           </div>

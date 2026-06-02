@@ -1,4 +1,3 @@
-import { BRAND_NAME } from "@/lib/brand";
 import { TELEGRAM_URL, TELEGRAM_LABEL } from "@/lib/constants";
 
 export function Contact() {
@@ -12,8 +11,8 @@ export function Contact() {
           Готовы обсудить ваш проект?
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-lg text-zinc-400">
-          Напишите в Telegram — ответим в течение дня, зададим уточняющие вопросы
-          и предложим формат работы под вашу задачу. {BRAND_NAME} — на связи.
+          Напишите в Telegram — отвечу в течение дня, задам уточняющие вопросы
+          и предложу формат работы под вашу задачу.
         </p>
 
         <a

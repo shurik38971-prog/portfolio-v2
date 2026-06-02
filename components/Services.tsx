@@ -1,5 +1,5 @@
 import { Button } from "@/components/Button";
-import { TELEGRAM_URL } from "@/lib/constants";
+import { CTA_PRIMARY, TELEGRAM_URL } from "@/lib/constants";
 
 const services = [
   {
@@ -99,7 +99,7 @@ export function Services() {
 
         <div className="mt-12 text-center">
           <Button href={TELEGRAM_URL} external>
-            Обсудить задачу в Telegram
+            {CTA_PRIMARY}
           </Button>
         </div>
       </div>

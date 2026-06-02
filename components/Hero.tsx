@@ -1,6 +1,6 @@
 import { Button } from "@/components/Button";
-import { BRAND_NAME } from "@/lib/brand";
-import { TELEGRAM_URL } from "@/lib/constants";
+import { BRAND_LINE } from "@/lib/brand";
+import { CTA_PRIMARY, TELEGRAM_URL } from "@/lib/constants";
 
 export function Hero() {
   return (
@@ -13,11 +13,11 @@ export function Hero() {
       <div className="container-narrow">
         <p className="mb-6 inline-flex items-center gap-2 rounded-full border border-zinc-700 bg-accent-light px-4 py-1.5 text-sm font-medium text-zinc-300">
           <span className="h-2 w-2 rounded-full bg-white" />
-          Студия {BRAND_NAME} · принимаем проекты
+          {BRAND_LINE}
         </p>
 
         <h1 className="max-w-4xl text-4xl font-bold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl">
-          Создаём сайты, которые приводят клиентов и заявки
+          Создаю сайты, которые приводят клиентов и заявки
         </h1>
 
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-zinc-400 sm:text-xl">
@@ -27,7 +27,7 @@ export function Hero() {
 
         <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
           <Button href={TELEGRAM_URL} external>
-            Получить консультацию
+            {CTA_PRIMARY}
           </Button>
           <Button href="#cases" variant="secondary">
             Смотреть кейсы

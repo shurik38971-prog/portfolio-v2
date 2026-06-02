@@ -8,7 +8,8 @@ import { TELEGRAM_URL, TELEGRAM_LABEL } from "@/lib/constants";
 const nav = [
   { href: "#services", label: "Услуги" },
   { href: "#cases", label: "Кейсы" },
-  { href: "#process", label: "Процесс" },
+  { href: "#pricing", label: "Стоимость" },
+  { href: "#faq", label: "FAQ" },
   { href: "#contact", label: "Контакты" },
 ];
 
