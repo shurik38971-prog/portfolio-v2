@@ -7,6 +7,7 @@ import { About } from "@/components/About";
 import { Process } from "@/components/Process";
 import { Pricing } from "@/components/Pricing";
 import { FAQ } from "@/components/FAQ";
+import { LeadMagnet } from "@/components/LeadMagnet";
 import { Contact } from "@/components/Contact";
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
       <Process />
       <Pricing />
       <FAQ />
+      <LeadMagnet />
       <Contact />
     </>
   );
