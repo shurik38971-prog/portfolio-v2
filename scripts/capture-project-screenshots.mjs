@@ -34,7 +34,8 @@ for (const { url, file } of targets) {
   console.log("Capturing", url);
   try {
     await page.goto(url, { waitUntil: "networkidle", timeout: 60000 });
-    await page.waitForTimeout(2000);
+    await page.evaluate(() => window.scrollTo(0, 0));
+    await page.waitForTimeout(2500);
     await page.screenshot({
       path: join(outDir, file),
       type: "jpeg",

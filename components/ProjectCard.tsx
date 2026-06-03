@@ -22,7 +22,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
           alt={project.imageAlt}
           fill
           sizes="(max-width: 768px) 100vw, 50vw"
-          className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+          className="object-cover object-[center_top] transition-transform duration-700 ease-out group-hover:scale-[1.04] group-hover:origin-top"
           priority={project.slug === "dental" || project.slug === "online-school"}
         />
         <div

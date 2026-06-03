@@ -78,10 +78,8 @@ export function Cases() {
                 className="overflow-hidden rounded-2xl border border-subtle bg-surface-card"
               >
                 <div className="grid lg:grid-cols-2 lg:items-stretch">
-                  <div
-                    className={`relative lg:min-h-[420px] ${index % 2 === 1 ? "lg:order-2" : ""}`}
-                  >
-                    <ProjectPreview project={project} fillHeight />
+                  <div className={index % 2 === 1 ? "lg:order-2" : ""}>
+                    <ProjectPreview project={project} imageFit="full" />
                   </div>
 
                   <div
