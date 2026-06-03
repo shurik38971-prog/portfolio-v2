@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { ProjectBadges } from "@/components/ProjectBadges";
+import { CTA_VIEW_DEMO } from "@/lib/constants";
 import type { PortfolioProject } from "@/lib/projects";
 
 interface ProjectCardProps {
@@ -13,7 +15,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
         target="_blank"
         rel="noopener noreferrer"
         className="relative block aspect-[16/10] min-h-[200px] overflow-hidden sm:min-h-[240px]"
-        aria-label={`Открыть проект: ${project.title}`}
+        aria-label={`Смотреть демо: ${project.title}`}
       >
         <Image
           src={project.image}
@@ -31,9 +33,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
           className="absolute inset-0 bg-gradient-to-br from-black/50 via-black/10 to-transparent opacity-80 transition-opacity duration-500 group-hover:opacity-90"
           aria-hidden
         />
-        <span className="absolute bottom-4 left-4 rounded-full border border-white/20 bg-black/40 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
-          Live demo
-        </span>
+        <ProjectBadges />
       </a>
 
       <div className="flex flex-1 flex-col p-6 sm:p-8">
@@ -64,7 +64,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
           rel="noopener noreferrer"
           className="mt-6 inline-flex w-full items-center justify-center rounded-full border border-zinc-600 bg-transparent px-6 py-3.5 text-sm font-semibold text-white transition-all hover:border-zinc-400 hover:bg-white/5 sm:w-auto"
         >
-          Открыть проект
+          {CTA_VIEW_DEMO}
           <span className="ml-2 opacity-60" aria-hidden>
             ↗
           </span>

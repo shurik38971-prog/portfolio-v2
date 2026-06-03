@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ProjectBadges } from "@/components/ProjectBadges";
 import type { PortfolioProject } from "@/lib/projects";
 
 interface ProjectPreviewProps {
@@ -42,6 +43,7 @@ export function ProjectPreview({
           className="absolute inset-0 bg-gradient-to-br from-black/40 via-transparent to-transparent"
           aria-hidden
         />
+        <ProjectBadges />
       </div>
     </a>
   );

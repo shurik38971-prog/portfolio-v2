@@ -17,7 +17,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
     title: "Стоматология",
     emoji: "🦷",
     description:
-      "Премиальный сайт медицинской клиники с акцентом на доверие, услуги и запись на консультацию.",
+      "Премиальный сайт медицинской клиники с акцентом на доверие, услуги и удобную запись.",
     href: "https://premium-dental-clinic-bay.vercel.app",
     image: "/projects/dental.jpg",
     imageAlt: "Превью сайта стоматологической клиники",
@@ -28,7 +28,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
     title: "Онлайн-школа",
     emoji: "🎓",
     description:
-      "Концепт образовательной платформы с личным кабинетом, программой обучения и продуктовым UX.",
+      "Концепт EdTech-платформы с личным кабинетом, программой обучения и продуктовым UX.",
     href: "https://online-school-seven.vercel.app",
     image: "/projects/online-school.jpg",
     imageAlt: "Превью сайта онлайн-школы",
@@ -39,7 +39,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
     title: "Ремонт квартир",
     emoji: "🔧",
     description:
-      "Коммерческий лендинг с калькулятором стоимости и сценариями обращения клиента.",
+      "Коммерческий лендинг с калькулятором стоимости и понятным сценарием обращения.",
     href: "https://remont-kappa.vercel.app",
     image: "/projects/remont.jpg",
     imageAlt: "Превью сайта сервиса ремонта квартир",
@@ -50,7 +50,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
     title: "Юрист",
     emoji: "⚖️",
     description:
-      "Сайт частного специалиста с акцентом на доверие и экспертность.",
+      "Сайт частного специалиста с акцентом на личный бренд, доверие и экспертность.",
     href: "https://advokat-coral.vercel.app",
     image: "/projects/advokat.jpg",
     imageAlt: "Превью сайта частного юриста",

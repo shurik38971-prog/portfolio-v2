@@ -1,5 +1,6 @@
 import { ProjectPreview } from "@/components/ProjectPreview";
 import { SectionHeader } from "@/components/SectionHeader";
+import { CTA_VIEW_DEMO, PORTFOLIO_DISCLAIMER } from "@/lib/constants";
 import { getProjectBySlug, type ProjectSlug } from "@/lib/projects";
 
 const concepts: {
@@ -59,8 +60,12 @@ export function Cases() {
         <SectionHeader
           label="Кейсы"
           title="Концепты и демонстрационные проекты"
-          description="Проекты, созданные для демонстрации подхода к UX, структуре и современной веб-разработке."
+          description="Разбор UX-задач и решений по каждой нише — без вымысленных коммерческих результатов."
         />
+
+        <p className="mt-6 max-w-3xl text-base leading-relaxed text-zinc-500 sm:text-lg">
+          {PORTFOLIO_DISCLAIMER}
+        </p>
 
         <div className="mt-14 space-y-16 sm:space-y-24">
           {concepts.map((item, index) => {
@@ -116,7 +121,7 @@ export function Cases() {
                       rel="noopener noreferrer"
                       className="mt-8 inline-flex items-center text-sm font-semibold text-white transition-colors hover:text-zinc-300"
                     >
-                      Открыть проект
+                      {CTA_VIEW_DEMO}
                       <span className="ml-2" aria-hidden>
                         ↗
                       </span>
