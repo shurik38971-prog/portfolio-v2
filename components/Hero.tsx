@@ -1,6 +1,6 @@
 import { Button } from "@/components/Button";
 import { BRAND_LINE } from "@/lib/brand";
-import { CTA_PRIMARY, TELEGRAM_URL } from "@/lib/constants";
+import { CTA_PRIMARY, CTA_VIEW_PROJECTS, TELEGRAM_URL } from "@/lib/constants";
 
 export function Hero() {
   return (
@@ -17,31 +17,37 @@ export function Hero() {
         </p>
 
         <h1 className="max-w-4xl text-4xl font-bold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl">
-          Создаю сайты, которые приводят клиентов и заявки
+          Разрабатываю сайты и цифровые продукты для бизнеса
         </h1>
 
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-zinc-400 sm:text-xl">
-          Лендинги и сайты для бизнеса, которые превращают посетителей в
-          клиентов. Без шаблонов — под вашу нишу и задачу.
+          От продающих лендингов до интерактивных веб-сервисов. Продуманная
+          структура, современный UX и решения под задачи бизнеса.
         </p>
 
         <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
           <Button href={TELEGRAM_URL} external>
             {CTA_PRIMARY}
           </Button>
-          <Button href="#concepts" variant="secondary">
-            Смотреть концепты
+          <Button href="#projects" variant="secondary">
+            {CTA_VIEW_PROJECTS}
           </Button>
         </div>
 
         <ul className="mt-14 grid gap-6 border-t border-subtle pt-10 sm:grid-cols-3">
           {[
             {
-              value: "Без шаблонов",
-              label: "структура и дизайн под конкретную нишу",
+              value: "Проектирование",
+              label: "структура и сценарии под задачу бизнеса",
             },
-            { value: "3–7 дней", label: "средний срок запуска" },
-            { value: "Под ключ", label: "всё от прототипа до запуска" },
+            {
+              value: "UX и интерфейс",
+              label: "удобство, иерархия, адаптивность",
+            },
+            {
+              value: "Цифровые продукты",
+              label: "от лендинга до веб-сервиса",
+            },
           ].map((item) => (
             <li key={item.value}>
               <p className="text-2xl font-bold text-white">{item.value}</p>

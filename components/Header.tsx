@@ -3,13 +3,13 @@
 import Link from "next/link";
 import { useState } from "react";
 import { Logo } from "@/components/Logo";
-import { TELEGRAM_URL, TELEGRAM_LABEL } from "@/lib/constants";
+import { CTA_PRIMARY, TELEGRAM_URL } from "@/lib/constants";
 
 const nav = [
-  { href: "#services", label: "Услуги" },
+  { href: "#projects", label: "Проекты" },
+  { href: "#design", label: "Решения" },
   { href: "#concepts", label: "Концепты" },
-  { href: "#pricing", label: "Стоимость" },
-  { href: "#faq", label: "FAQ" },
+  { href: "#about", label: "Обо мне" },
   { href: "#contact", label: "Контакты" },
 ];
 
@@ -39,7 +39,7 @@ export function Header() {
           rel="noopener noreferrer"
           className="hidden rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-zinc-950 transition-colors hover:bg-accent-hover md:inline-flex"
         >
-          {TELEGRAM_LABEL}
+          {CTA_PRIMARY}
         </a>
 
         <button
@@ -78,7 +78,7 @@ export function Header() {
               rel="noopener noreferrer"
               className="mt-2 inline-flex justify-center rounded-full bg-accent px-5 py-3 text-center font-semibold text-zinc-950"
             >
-              {TELEGRAM_LABEL}
+              {CTA_PRIMARY}
             </a>
           </nav>
         </div>

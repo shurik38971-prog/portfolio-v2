@@ -1,28 +1,30 @@
 import { Hero } from "@/components/Hero";
-import { ForWho } from "@/components/ForWho";
-import { Services } from "@/components/Services";
+import { Intro } from "@/components/Intro";
+import { FeaturedProjects } from "@/components/FeaturedProjects";
+import { WhatIDesign } from "@/components/WhatIDesign";
+import { DesignApproach } from "@/components/DesignApproach";
 import { Cases } from "@/components/Cases";
-import { WhyMe } from "@/components/WhyMe";
 import { About } from "@/components/About";
 import { Process } from "@/components/Process";
+import { Technologies } from "@/components/Technologies";
 import { Pricing } from "@/components/Pricing";
 import { FAQ } from "@/components/FAQ";
-import { LeadMagnet } from "@/components/LeadMagnet";
 import { Contact } from "@/components/Contact";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <ForWho />
-      <Services />
+      <Intro />
+      <FeaturedProjects />
+      <WhatIDesign />
+      <DesignApproach />
       <Cases />
-      <WhyMe />
       <About />
       <Process />
+      <Technologies />
       <Pricing />
       <FAQ />
-      <LeadMagnet />
       <Contact />
     </>
   );

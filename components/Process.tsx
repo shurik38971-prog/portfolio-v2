@@ -1,27 +1,29 @@
+import { SectionHeader } from "@/components/SectionHeader";
+
 const steps = [
   {
     step: "01",
-    title: "Анализ бизнеса",
+    title: "Анализ задачи",
     description:
-      "Разбираем нишу, аудиторию, конкурентов и что должно произойти после визита на сайт.",
+      "Разбираем бизнес-контекст, аудиторию и сценарий, который должен поддерживать интерфейс.",
   },
   {
     step: "02",
     title: "Прототип",
     description:
-      "Схема страниц и блоков без «украшательств» — согласуем логику и путь к заявке.",
+      "Схема страниц и блоков — согласуем структуру, логику и путь пользователя.",
   },
   {
     step: "03",
     title: "Дизайн и разработка",
     description:
-      "Современный минималистичный интерфейс, быстрая загрузка, адаптив под телефон и десктоп.",
+      "Визуальная система, вёрстка, интерактив и адаптив под все устройства.",
   },
   {
     step: "04",
-    title: "Запуск и улучшения",
+    title: "Запуск",
     description:
-      "Публикуем сайт, подключаем аналитику и при необходимости дорабатываем по обратной связи.",
+      "Публикация, проверка на реальных устройствах и доработки по обратной связи.",
   },
 ];
 
@@ -29,17 +31,11 @@ export function Process() {
   return (
     <section id="process" className="section-padding">
       <div className="container-narrow">
-        <div className="max-w-2xl">
-          <p className="text-sm font-semibold uppercase tracking-wider text-zinc-400">
-            Как проходит работа
-          </p>
-          <h2 className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
-            От анализа до запуска — в четыре шага
-          </h2>
-          <p className="mt-4 text-lg text-zinc-400">
-            Вы всегда понимаете, на каком этапе проект и что будет дальше.
-          </p>
-        </div>
+        <SectionHeader
+          label="Процесс"
+          title="Как проходит работа"
+          description="Прозрачные этапы — от постановки задачи до готового продукта."
+        />
 
         <ol className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {steps.map((item, index) => (

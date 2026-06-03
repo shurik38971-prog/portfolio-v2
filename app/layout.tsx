@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: `${BRAND_NAME} — сайты, которые приводят заявки`,
+  title: `${BRAND_NAME} — сайты и цифровые продукты для бизнеса`,
   description: BRAND_TAGLINE,
   icons: {
     icon: [{ url: "/favicon.png", sizes: "32x32", type: "image/png" }],
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     shortcut: FAVICON_SRC,
   },
   openGraph: {
-    title: `${BRAND_NAME} — студия сайтов для бизнеса`,
+    title: `${BRAND_NAME} — веб-разработка для бизнеса`,
     description: BRAND_TAGLINE,
   },
 };

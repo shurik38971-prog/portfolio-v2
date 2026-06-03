@@ -1,4 +1,5 @@
 import { Button } from "@/components/Button";
+import { SectionHeader } from "@/components/SectionHeader";
 import { CTA_PRIMARY, TELEGRAM_URL } from "@/lib/constants";
 
 const plans = [
@@ -6,9 +7,9 @@ const plans = [
     title: "Лендинг",
     price: "от 20 000 ₽",
     features: [
-      "анализ задачи",
-      "адаптивный дизайн",
-      "форма заявок",
+      "анализ задачи и структуры",
+      "адаптивный интерфейс",
+      "формы и сценарии обращения",
       "подключение домена",
       "запуск проекта",
     ],
@@ -18,12 +19,11 @@ const plans = [
     title: "Корпоративный сайт",
     price: "от 35 000 ₽",
     features: [
-      "анализ задачи и структуры",
-      "несколько страниц",
-      "адаптивный дизайн",
-      "формы заявок",
-      "базовая SEO-структура",
-      "запуск проекта",
+      "проектирование нескольких страниц",
+      "дизайн-система и компоненты",
+      "адаптивная вёрстка",
+      "интеграция форм",
+      "запуск и сопровождение",
     ],
     featured: true,
   },
@@ -32,10 +32,10 @@ const plans = [
     price: "обсуждается отдельно",
     features: [
       "техническое задание",
-      "интеграции и автоматизация",
-      "нестандартная логика",
+      "интеграции и API",
+      "интерактивная логика",
       "тестирование",
-      "сопровождение после запуска",
+      "поддержка после релиза",
     ],
     featured: false,
   },
@@ -43,20 +43,13 @@ const plans = [
 
 export function Pricing() {
   return (
-    <section id="pricing" className="section-padding section-alt">
+    <section id="pricing" className="section-padding">
       <div className="container-narrow">
-        <div className="max-w-2xl">
-          <p className="text-sm font-semibold uppercase tracking-wider text-zinc-400">
-            Стоимость
-          </p>
-          <h2 className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
-            Прозрачные цены без сюрпризов
-          </h2>
-          <p className="mt-4 text-lg text-zinc-400">
-            Точная сумма зависит от задачи. Напишите — за 15 минут сориентирую по
-            срокам и бюджету.
-          </p>
-        </div>
+        <SectionHeader
+          label="Стоимость"
+          title="Ориентиры по бюджету"
+          description="Точная оценка — после обсуждения задачи, объёма и сроков."
+        />
 
         <div className="mt-14 grid gap-6 lg:grid-cols-3">
           {plans.map((plan) => (
